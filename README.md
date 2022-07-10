@@ -21,6 +21,6 @@ $ yarn start
 
 
 
+## Try out live site
 
-
-# movie-ui
+The app is deployed at netlify [live site](https://62caad8c01f49e250e309ccb--meek-meringue-851744.netlify.app).<br/>

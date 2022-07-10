@@ -80,7 +80,7 @@ class LoginForm extends React.Component<MyProps, MyState> {
           </Form>
           <Message>
             New to us?{" "}
-            <span onClick={() => this.props.history.push("/auth/sign-up")}>
+            <span onClick={() => this.props.history.push("/auth/sign-up")} style={{color: "blue", cursor: "pointer"}}>
               Sign Up
             </span>
           </Message>

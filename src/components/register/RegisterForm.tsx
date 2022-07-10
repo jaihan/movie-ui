@@ -79,7 +79,7 @@ class RegisterForm extends React.Component<MyProps, MyState> {
             <Button type="submit">Submit</Button>
           </Form>
           <Message>
-            go back? <span onClick={() => this.props.history.push("/")}>Sign In</span>
+            go back? <span onClick={() => this.props.history.push("/")} style={{color: "blue", cursor: "pointer"}}>Sign In</span>
           </Message>
         </Grid.Column>
       </Grid>

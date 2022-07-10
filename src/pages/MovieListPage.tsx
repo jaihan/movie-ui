@@ -99,7 +99,7 @@ class MovieListPage extends React.Component<MyProps, MyState> {
     }
   }
 
-  async filerMovieByProductionYear(event:  React.SyntheticEvent | any) {
+  async filerMovieByProductionYear(event: React.SyntheticEvent | any) {
     try {
       const queryParams = {
         page: this.state.begin,
@@ -139,6 +139,7 @@ class MovieListPage extends React.Component<MyProps, MyState> {
           icon="search"
           placeholder="Search by production year"
           onChange={this.filerMovieByProductionYear}
+          style={{ marginBottom: "2em" }}
         />
         <Card.Group itemsPerRow={3}>
           {movies.map((movie: any) => (
@@ -159,6 +160,7 @@ class MovieListPage extends React.Component<MyProps, MyState> {
           activePage={activePage}
           onPageChange={this.handlePaginate}
           totalPages={Math.ceil(total / 3)}
+          style={{ marginTop: "2em" }}
         />
       </div>
     );

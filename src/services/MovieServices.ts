@@ -29,23 +29,11 @@ class MovieServices {
     if(query.productionyear !== undefined){
       queryProductionYear="&productionyear="+query.productionyear
     }
-    return http.get(`/movie/all?${queryPage}${querySize}${queryTitle}${queryGenre}${queryProductionYear}`);
+    return http.get(`/movies?${queryPage}${querySize}${queryTitle}${queryGenre}${queryProductionYear}`);
   }
 
   get(id: string) {
     return http.get(`/movie/${id}`);
-  }
-
-  create(data: any) {
-    return http.post("/tutorials", data);
-  }
-
-  update(id: number, data: any) {
-    return http.put(`/tutorials/${id}`, data);
-  }
-
-  delete(id: number) {
-    return http.delete(`/tutorials/${id}`);
   }
 }
 

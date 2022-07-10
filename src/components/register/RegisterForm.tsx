@@ -1,7 +1,6 @@
 import React from "react";
 import { withRouter, RouteComponentProps } from "react-router-dom";
 import AuthenticateService from "../../services/AuthenticateService";
-import { setItem } from "../storage/LocalStorage";
 import {
   Button,
   Form,
@@ -38,9 +37,8 @@ class RegisterForm extends React.Component<MyProps, MyState> {
         email: email,
         password: password,
       };
-      const res = await AuthenticateService.signUp(data);
-      setItem("Authorization", res.data.access_token);
-      this.props.history.push("/user");
+      await AuthenticateService.signUp(data);
+      this.props.history.push("/");
     } catch (error) {
       console.log(error);
     }
@@ -81,7 +79,7 @@ class RegisterForm extends React.Component<MyProps, MyState> {
             <Button type="submit">Submit</Button>
           </Form>
           <Message>
-            go back? <a onClick={() => this.props.history.push("/")}>Sign In</a>
+            go back? <span onClick={() => this.props.history.push("/")}>Sign In</span>
           </Message>
         </Grid.Column>
       </Grid>

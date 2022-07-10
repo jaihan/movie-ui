@@ -1,6 +1,6 @@
 ## Description
 
- React Consume nestjs restful api [here](https://github.com/jaihan/nestjs-auth-orm-swagger) using axios promise based HTTP client. 
+ React Consume node express restful api [here](https://github.com/jaihan/movie-api) using axios promise based HTTP client. 
  
 ## Available Scripts
 
